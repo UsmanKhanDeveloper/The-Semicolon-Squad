@@ -9,16 +9,16 @@ import "../Auth.css";
 const Login = () => {
   const navigate = useNavigate();
 
-  const handleGoogleSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse.credential);
-    console.log("✅ Logged in with Google:", decoded);
-    // You could save this to localStorage or app context
-    navigate("/home");
-  };
+  // const handleGoogleSuccess = (credentialResponse) => {
+  //   const decoded = jwtDecode(credentialResponse.credential);
+  //   console.log("✅ Logged in with Google:", decoded);
+  //   // You could save this to localStorage or app context
+  //   navigate("/home");
+  // };
 
-  const handleGoogleError = () => {
-    console.error("❌ Google Sign-In failed");
-  };
+  // const handleGoogleError = () => {
+  //   console.error("❌ Google Sign-In failed");
+  // };
 
   return (
     <div className="login-container">
@@ -36,12 +36,12 @@ const Login = () => {
           <button type="submit" className="login-button">Log in</button>
         </form>
 
-        <div className="google-login">
+        {/* <div className="google-login">
           <GoogleLogin
             onSuccess={handleGoogleSuccess}
             onError={handleGoogleError}
           />
-        </div>
+        </div> */}
 
         <p className="switch-text">
           Don’t have an account?{" "}
